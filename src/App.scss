@@ -1,0 +1,17 @@
+@import "./scss/vars.module.scss";
+@import "./scss/fonts.module.scss";
+
+.App {
+  flex: 1;
+  min-height: 100vh;
+  background-color: $primary600;
+}
+
+.ImageBg {
+  width: 100px;
+  height: 100px;
+  background: url('images/hello.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

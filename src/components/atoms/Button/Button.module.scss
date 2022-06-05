@@ -1,0 +1,14 @@
+@import "scss/vars.module.scss";
+
+.Button {
+    // font-family: $primaryFont;
+    font-family: $secondaryFont;
+    font-weight: 600;
+    font-size: 50px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: $primary600;
+    color: $white;
+    cursor: pointer;
+}
