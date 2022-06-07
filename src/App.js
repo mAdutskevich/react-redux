@@ -1,23 +1,40 @@
 import './App.scss';
-import helloIcon from 'images/hello.svg';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Button from 'components/atoms/Button/index.js';
 
 function App() {
+  const dispatch = useDispatch();
+  const value = useSelector(state => state.value);
+
+  const handleIncrement = () => {
+    dispatch({type: 'INCREMENT'})
+  };
+
+  const handleDecrement = () => {
+    dispatch({type: 'DECREMENT'})
+  };
+
   return (
     <div className="App">
-      <div>
-        <Button 
-          label="Almost before"
-        />
-      </div>
-      
-      <div>
-        <img src={helloIcon}/>
-      </div>
+      <div className="counter">
+        <div className="instance">
+          <Button 
+            label="Increment"
+            onClick={handleIncrement}
+          />
+        </div>
 
-      <div className='ImageBg'>
+        <div>
+          {value}
+        </div>
 
+        <div>
+          <Button 
+            label="Decrement"
+            onClick={handleDecrement}
+          />
+        </div>
       </div>
     </div>
   );

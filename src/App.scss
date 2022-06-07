@@ -1,5 +1,4 @@
-@import "./scss/vars.module.scss";
-@import "./scss/fonts.module.scss";
+@import "./scss/vars.scss";
 
 .App {
   flex: 1;
@@ -14,4 +13,10 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

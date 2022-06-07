@@ -3,12 +3,42 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import 'normalize.css';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+const defaultState = {
+  value: 0,
+};
+
+
+// Reducer is a function, which changes the global state. 
+// That's why we need current state and action. 
+// Action is an Object where we necessarily have type to understand what case of changes should be done in state
+const  counterReducer = (state = defaultState, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return {
+        ...state,
+        value: state.value + 1,
+      };
+    case 'DECREMENT':
+      return {
+        ...state,
+        value: state.value - 1,
+      };
+    default: 
+      return state;
+  }
+};
+
+const store = createStore(counterReducer); // gets 2 args: 1) reducer 2) ...
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
