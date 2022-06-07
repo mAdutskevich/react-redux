@@ -1,12 +1,16 @@
 import './App.scss';
-import helloIcon from 'images/hello.svg';
+// import helloIcon from 'images/hello.svg';
 
-import Button from 'components/atoms/Button/index.js';
+// import Button from 'components/atoms/Button/index.js';
+import Counter from 'components/molecules/Counter';
 
 function App() {
   return (
-    <div className="App">
-      <div>
+    <div className="app">
+      <div className="counerWrapper">
+        <Counter />
+      </div>
+      {/* <div>
         <Button 
           label="Almost before"
         />
@@ -16,9 +20,7 @@ function App() {
         <img src={helloIcon}/>
       </div>
 
-      <div className='ImageBg'>
-
-      </div>
+      <div className='imageBg' /> */}
     </div>
   );
 }

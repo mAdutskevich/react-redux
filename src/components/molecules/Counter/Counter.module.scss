@@ -1,0 +1,18 @@
+@import 'scss/vars.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemWrapper:not(:first-child) {
+    margin-left: 30px;
+}
+
+.text {
+    font-family: $primaryFont;
+    font-weight: 400;
+    color: $white;
+}
