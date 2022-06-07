@@ -1,7 +1,8 @@
-import { ADD_CLIENT, REMOVE_LAST_CLIENT } from 'redux/types';
+import { ADD_CLIENT, REMOVE_LAST_CLIENT, ADD_MANY_CLIENTS } from 'redux/types';
 
 const defaultState = {
     clients: ['Mike', 'Mike', 'Mike'],
+    users: [],
 };
 
 export const clientReducer = (state = defaultState, action) => {
@@ -18,6 +19,11 @@ export const clientReducer = (state = defaultState, action) => {
             return {
                 ...state,
                 clients: clientsFiltered,
+            };
+        case ADD_MANY_CLIENTS:
+            return {
+                ...state,
+                users: [...state.users, ...action.payload],
             };
         default:
             return state;
