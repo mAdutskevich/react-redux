@@ -1,10 +1,10 @@
-@import "scss/vars.module.scss";
+@import "scss/vars.scss";
 
 .Button {
-    // font-family: $primaryFont;
-    font-family: $secondaryFont;
-    font-weight: 600;
-    font-size: 50px;
+    font-family: $primaryFont;
+    // font-family: $secondaryFont;
+    font-weight: 400;
+    font-size: 16px;
     padding: 8px 20px;
     border: none;
     border-radius: 4px;
