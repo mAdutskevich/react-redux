@@ -2,23 +2,24 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 const Button = ({
-    label,
-    onClick,
+  label,
+  onClick,
 }) => {
-    const handleClick = (e) => {
-        e.preventDefault();
+  const handleClick = (e) => {
+    e.preventDefault();
 
-        onClick?.();
-    };
+    onClick?.();
+  };
 
-    return (
-        <button
-            className={styles.Button}
-            onClick={handleClick}
-        >
-            {label}
-        </button>
-    );
-}
+  return (
+    <button
+      type="button"
+      className={styles.Button}
+      onClick={handleClick}
+    >
+      {label}
+    </button>
+  );
+};
 
 export default Button;

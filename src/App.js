@@ -1,14 +1,15 @@
+import React from 'react';
 import './App.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { addClient, removeLastClient } from 'redux/actions/clientActions';
 import { increment, decrement } from 'redux/actions/counterActions';
 
-import Button from 'components/atoms/Button/index.js';
+import Button from 'components/atoms/Button/index';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
-  const value = useSelector(state => state.counter.value);
-  const clients = useSelector(state => state.clients.clients);
+  const value = useSelector((state) => state.counter.value);
+  const clients = useSelector((state) => state.clients.clients);
 
   const handleIncrement = () => {
     dispatch(increment());
@@ -34,7 +35,7 @@ function App() {
     <div className="App">
       <div className="counter">
         <div className="instance">
-          <Button 
+          <Button
             label="Increment"
             onClick={handleIncrement}
           />
@@ -45,7 +46,7 @@ function App() {
         </div>
 
         <div>
-          <Button 
+          <Button
             label="Decrement"
             onClick={handleDecrement}
           />
@@ -54,7 +55,7 @@ function App() {
 
       <div className="clients">
         <div className="instance">
-          <Button 
+          <Button
             label="Add Client"
             onClick={handleAdd}
           />
@@ -65,7 +66,7 @@ function App() {
         </div>
 
         <div className="instance">
-          <Button 
+          <Button
             label="Remove last"
             onClick={handleRemoveLast}
           />
@@ -73,6 +74,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
