@@ -1,18 +1,26 @@
 @import 'scss/vars.scss';
 
 .wrapper {
+    padding: 10px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    margin: 0;
+    font-family: $primaryFont;
+    font-weight: 400;
+}
+
+.buttons {
+    display: flex;
+}
+
+.value {
+    font-family: $primaryFont;
+    font-weight: 400;
 }
 
 .itemWrapper:not(:first-child) {
-    margin-left: 30px;
-}
-
-.text {
-    font-family: $primaryFont;
-    font-weight: 400;
-    color: $white;
+    margin-left: 10px;
 }

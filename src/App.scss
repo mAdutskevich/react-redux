@@ -1,21 +1,21 @@
-@import "scss/vars.scss";
-@import "scss/fonts.scss";
+@import 'scss/vars.scss';
+@import 'scss/fonts.scss';
 
 .app {
-  flex: 1;
-  min-height: 100vh;
-  background-color: $primary600;
+    flex: 1;
+    min-height: 100vh;
+    background-color: $primary600;
 }
 
 .imageBg {
-  width: 100px;
-  height: 100px;
-  background: url('images/hello.svg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    background: url('images/hello.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .counerWrapper {
-  display: inline-flex;
+    display: inline-flex;
 }

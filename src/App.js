@@ -1,28 +1,14 @@
+import React from 'react';
 import './App.scss';
-// import helloIcon from 'images/hello.svg';
-
-// import Button from 'components/atoms/Button/index.js';
-import Counter from 'components/molecules/Counter';
+import { BrowserRouter } from 'react-router-dom';
+import { Root } from 'components/templates/Root';
 
 function App() {
-  return (
-    <div className="app">
-      <div className="counerWrapper">
-        <Counter />
-      </div>
-      {/* <div>
-        <Button 
-          label="Almost before"
-        />
-      </div>
-      
-      <div>
-        <img src={helloIcon}/>
-      </div>
-
-      <div className='imageBg' /> */}
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Root />
+        </BrowserRouter>
+    );
 }
 
 export default App;

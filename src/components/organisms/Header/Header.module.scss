@@ -1,0 +1,23 @@
+@import 'scss/vars.scss';
+
+.wrapper {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+.navigation {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+}
+
+.navigation li {
+    cursor: pointer;
+}
+
+.navigation li:not(:first-child) {
+    padding-left: 20px;
+}
