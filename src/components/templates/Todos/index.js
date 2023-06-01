@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchTodos } from 'redux/thunks/todosThunks';
 import { clearTodosAction } from 'redux/slices/todosSlice';
-import { Header } from 'components/organisms/Header';
 import Button from 'components/atoms/Button';
 import styles from './Todos.module.scss';
 
@@ -20,7 +19,6 @@ export const Todos = () => {
 
     return (
         <div className={styles.wrapper}>
-            <Header />
             <main className={styles.content}>
                 {isLoading && <div>Loading...</div>}
                 {!!error && <div>Error: {error.message}</div>}

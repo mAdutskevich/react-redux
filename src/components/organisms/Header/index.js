@@ -13,6 +13,9 @@ export const Header = () => {
                     <li>
                         <Link to="/todos">Todos</Link>
                     </li>
+                    <li>
+                        <Link to="/posts">Posts</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

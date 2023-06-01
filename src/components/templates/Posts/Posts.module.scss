@@ -1,0 +1,30 @@
+@import 'scss/vars.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    padding: 10px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.post {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: hsl(0, 0%, 50%);
+    color: white;
+    border-radius: 4px;
+    transition: opacity 0.15s ease;
+    cursor: pointer;
+}
+
+.post:hover {
+    opacity: 0.9;
+    transition: opacity 0.15s ease;
+}
